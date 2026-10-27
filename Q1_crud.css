@@ -1,0 +1,260 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ff;
+    color: #2d2d44;
+}
+
+/* Header */
+.site-header {
+    background-color: #6c5ce7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.site-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #eeeaff;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+/* White sections */
+.panel {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(70, 50, 150, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 19px;
+    color: #5145cd;
+}
+
+/* Form */
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d8d3f5;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6c5ce7;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primary {
+    background-color: #6c5ce7;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+}
+
+.btn-put {
+    background-color: #16a085;
+}
+
+.btn-patch {
+    background-color: #e67e22;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+/* Status messages */
+.status {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.status.success {
+    background-color: #dff8e9;
+    color: #187344;
+}
+
+.status.error {
+    background-color: #ffe5e5;
+    color: #bd3030;
+}
+
+.status.loading {
+    background-color: #e5edff;
+    color: #3456a1;
+}
+
+/* Note */
+.note {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #77758b;
+}
+
+/* Posts heading */
+.posts-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#post-count {
+    color: #77758b;
+    font-size: 12px;
+}
+
+/* Posts grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* Individual post card */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e5e1fa;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(70, 50, 150, 0.12);
+}
+
+.post-meta {
+    font-size: 11px;
+    color: #8179a8;
+}
+
+.post-card h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.post-body {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #66657a;
+    overflow-wrap: anywhere;
+}
+
+/* Post buttons */
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.card-actions .btn {
+    padding: 8px;
+    font-size: 10px;
+}
+
+/* Empty posts message */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    color: #77758b;
+}
+
+/* Tablet screen */
+@media (max-width: 750px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile screen */
+@media (max-width: 500px) {
+    .container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header h1 {
+        font-size: 21px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+}

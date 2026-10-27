@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API CRUD Practice</title>
+    <link rel="stylesheet" href="Q1_crud.css">
+    <script src="Q1_crud.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Fetch API CRUD Practice</h1>
+        <p>GET · POST · PUT · PATCH · DELETE</p>
+    </header>
+
+    <main class="container">
+
+        <section class="panel">
+            <h2>Add a new post (POST)</h2>
+
+            <form id="post-form">
+                <div class="form-row">
+                    <input
+                        type="text"
+                        id="post-title"
+                        placeholder="Post title"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="user-id"
+                        placeholder="User ID"
+                        min="1"
+                        value="1"
+                        required
+                    >
+                </div>
+
+                <textarea
+                    id="post-body"
+                    placeholder="Write post content..."
+                    required
+                ></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="add-button">
+                        Add Post — POST
+                    </button>
+
+                    <button type="button" class="btn btn-secondary" id="reload-button">
+                        Reload Posts — GET
+                    </button>
+                </div>
+            </form>
+
+            <div id="status-message" class="status success" role="status">
+                Loading posts...
+            </div>
+
+            <p class="note">
+                Practice API: JSONPlaceholder returns example responses.
+                POST, PUT, PATCH and DELETE changes are not permanently saved
+                on its server. This page updates the local display so you can
+                see each operation.
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="posts-heading">
+                <h2>Posts</h2>
+                <span id="post-count">0 posts shown</span>
+            </div>
+
+            <div id="posts-grid" class="posts-grid"></div>
+        </section>
+
+    </main>
+
+</body>
+</html>
